@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --bg-light: #86c5ee;
+  --text-light: #101b32;
+  --primary-light: #4a5568;
+  --secondary-light: #edf2f7;
+  --card-light: #ffffff;
+  --bg-dark: #1a0942;
+  --text-dark: #23cc1d;
+  --primary-dark: #bac1cb;
+  --secondary-dark: #2d3748;  
+  --card-dark: #2d3748;
+  --head-color: #e4e7ed;
+}
+
+html.dark {
+  --bg-color: var(--bg-dark);
+  --text-color: var(--text-dark);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+  --card-color: var(--card-dark);
+  --head-color: var(--head-color);
+}
+
+html:not(.dark) {
+  --bg-color: var(--bg-light);
+  --text-color: var(--text-light);
+  --primary-color: var(--primary-light);
+  --secondary-color: var(--secondary-light);
+  --card-color: var(--card-light);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width .3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.skill-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(74, 85, 104, 0.1), 0 4px 6px -4px rgba(74, 85, 104, 0.1);
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(74, 85, 104, 0.1), 0 4px 6px -4px rgba(74, 85, 104, 0.1);
+}
+
+.hello-btn {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.hello-btn:hover {
+  transform: scale(1.05);
+  background-color: #2d3748;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+html.dark .timeline-item {
+  border-left: 2px solid #4a5568;
+}
+
+html:not(.dark) .timeline-item {
+  border-left: 2px solid #cbd5e0;
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+}
+
+html.dark .timeline-dot {
+  border: 2px solid var(--bg-dark);
+}
+
+html:not(.dark) .timeline-dot {
+  border: 2px solid var(--secondary-color);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light & Dark mode friendly custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  /* uses light or dark secondary color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--text-color) 100%);
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--text-color) 80%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+.dark {
+  .svgIcons {
+    filter: invert(100%);
+  }
+}
