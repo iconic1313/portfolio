@@ -8,7 +8,7 @@ export default function ProjectSection() {
             title: 'ICONIC GAME HUB',
             description: 'In this Game hub there are games like TIC-TAC-TOE,CONNECT4,SNACK GAME, GUESSNUMBER,ROCK-PAPER-SCISOOR.',
             image: '/Screenshot (7).png',
-            url: '',
+            url: 'https://varshilrepoo.vercel.app/',
             logo: '/circle-logo.png',
             language: [
                 { langname: 'Reactjs', color: 'bg-[#61DAFB]/20', text: 'text-[#61DAFB]' },
@@ -32,7 +32,7 @@ export default function ProjectSection() {
             title: 'AI POWERED RESUME GENERATOR',
             description: 'Generate resume and coverletter and send to your email in pdf format by just sending details to my email.',
             image: '/ai images.jpg',
-            url: '',
+            url: 'https://mail.google.com/mail/u/0/#sent',
             logo: '/circle-logo.png',
             language: [
                 { langname: 'GPT 4.1', color: 'bg-black/20', text: 'text-black dark:text-white' },
@@ -77,16 +77,16 @@ export default function ProjectSection() {
                                     priority
                                     className="w-full h-48 object-cover"
                                 />
-                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <a
-                                        href={project.url || '#'}
+                                        href='https://varshilrepoo.vercel.app/'
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-white text-sm font-semibold border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition"
                                     >
-                                        View Project
+                                       
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="p-6">
